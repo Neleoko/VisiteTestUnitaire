@@ -7,10 +7,10 @@ public class Visite {
     private ArrayList<PrestationVisite> lesPrestationsVisite;
     private String heure;
 
-    public Visite(Adherent leAdherent, ArrayList<PrestationVisite> lesPrestationsVisite, String heure) {
+    public Visite(Adherent leAdherent, String heure) {
         this.leAdherent = leAdherent;
-        this.lesPrestationsVisite = lesPrestationsVisite;
         this.heure = heure;
+        this.lesPrestationsVisite = new ArrayList<>();
     }
 
     public Adherent getLeAdherent() {
@@ -28,12 +28,12 @@ public class Visite {
     public float montantAFacture(){
         float total = 0;
         for (PrestationVisite pre : lesPrestationsVisite){
-            total = pre.getNombreActes() * pre.getLeTypePresation().getPrixForfaitaire();
+            total += pre.getNombreActes() * pre.getLeTypePrestation().getPrixForfaitaire();
         }
         return total;
     }
 
     public void ajouterPrestationVisite(TypePrestation typePrestation, int nombreActes){
-        
+        lesPrestationsVisite.add(new PrestationVisite(typePrestation, nombreActes));
     }
 }

@@ -11,6 +11,6 @@ public class Adherent extends Personne{
     }
 
     public String getCoordGPS(){
-        return latitude+" "+longitude;
+        return latitude + " - " + longitude;
     }
 }

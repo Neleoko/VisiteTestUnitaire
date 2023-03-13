@@ -4,7 +4,7 @@ public class TypePrestation {
     private float prixForfaitaire;
     private String libelle;
 
-    public TypePrestation(float prixForfaitaire, String libelle) {
+    public TypePrestation(String libelle, float prixForfaitaire) {
         this.prixForfaitaire = prixForfaitaire;
         this.libelle = libelle;
     }

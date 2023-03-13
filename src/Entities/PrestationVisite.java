@@ -1,16 +1,16 @@
 package Entities;
 
 public class PrestationVisite {
-    private TypePrestation leTypePresation;
+    private TypePrestation leTypePrestation;
     private int nombreActes;
 
-    public PrestationVisite(TypePrestation leTypePresation, int nombreActes) {
-        this.leTypePresation = leTypePresation;
+    public PrestationVisite(TypePrestation leTypePrestation, int nombreActes) {
+        this.leTypePrestation = leTypePrestation;
         this.nombreActes = nombreActes;
     }
 
-    public TypePrestation getLeTypePresation() {
-        return leTypePresation;
+    public TypePrestation getLeTypePrestation() {
+        return leTypePrestation;
     }
 
     public int getNombreActes() {
