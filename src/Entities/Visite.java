@@ -26,11 +26,14 @@ public class Visite {
     }
 
     public float montantAFacture(){
-
-        return 0;
+        float total = 0;
+        for (PrestationVisite pre : lesPrestationsVisite){
+            total = pre.getNombreActes() * pre.getLeTypePresation().getPrixForfaitaire();
+        }
+        return total;
     }
 
     public void ajouterPrestationVisite(TypePrestation typePrestation, int nombreActes){
-
-     }
+        
+    }
 }
